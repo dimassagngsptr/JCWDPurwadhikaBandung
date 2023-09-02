@@ -1,81 +1,92 @@
-// membuat variabel untuk menyimpan panjang dan lebar persegi
-// p = panjang
-// l = lebar
-// let panjang = 10;
-// let lebar = 5;
+// palindrome
 
-// // menghitung luas persegi panjang
-// const luas = panjang * lebar;
-// console.log(luas);
+// convert centimeter to kilometers
+let cm = 8000;
+let km = cm / 1000;
+console.log(km);
 
-// // menghitung keliling persegi panjang
-// let k = panjang + lebar;
-// const keliling = 2 * k;
-// console.log(keliling);
+// format number as currency
+let num = 10;
+let desc = "";
+for (let i = 1; i <= num; i++) {
+   desc += ` Rp.${i}.000,00`;
+}
+console.log(`${desc}`);
 
-// // jari jari lingkaran
-// let jariJari = 4;
-// // menghitung diameter lingkaran
-// const diameterLingkaran = 2 * jariJari;
-// console.log(diameterLingkaran);
-
-// // menghitung keliling lingkaran
-// const kelilingLingkaran = 3.14 * diameterLingkaran;
-// console.log(kelilingLingkaran);
-
-// // menghitung luas lingkaran
-// const luasLingkaran = 3.14 * jariJari ** 2;
-// console.log(luasLingkaran);
-
-// // segitiga sama kaki
-// // memiliki 3 sudut diantara lain
-// // A = 70
-// // B= 70
-// // C = ?
-
-// // rumus menemukan sudut segitiga
-// // menghitung sudut BAC
-// let s1 = 70;
-// let s2 = 70;
-
-// let s3 = 180 - (s1 - s2);
-// console.log(s3);
-
-// // mendapatkan data hari ini
-// const date1 = new Date();
-// console.log(date1);
-
-// // mendapatkan data tahun baru
-// const date2 = new Date("2024-01-01");
-// console.log(date2);
-
-// // menghitung jumlah selisih date1 dan date2
-// let selisih = date2.getTime() - date1.getTime();
-
-// // jumlah hari menuju tahun baru
-// let days = Math.floor(selisih / (24 * 60 * 60 * 1000));
-// console.log(`jumlah hari menuju tahun baru adalah ${days} hari`);
-
-// // menghitung tahun
-// let tahun = Math.floor(days / 365);
-// let sisa = days % 365;
-// let bulan = Math.floor(sisa / 30);
-// let hari = sisa % 30;
-// console.log(` ${bulan} bulan, ${tahun} tahun`);
-
-// for (let i = 0 ; i <= 10; i++) {
-//     console.log (i);
+// capital
+// let str = "bandung";
+// for (let i = str.length; i >= 0; i--) {
+//    console.log(str.charAt(i));
 // }
 
-// let person = {
-//    name: "John",
-//    age: 34,
-// };
-// let person2 = {
-//    name: "John",
-//    age: 34,
-// };
+// menunjukan type input
+let kata = true;
 
-// console.log(person.age == person2.age);
+if (typeof kata === "string") {
+   console.log("string");
+} else if (typeof kata === "number") {
+   console.log("number");
+} else if (typeof kata === "boolean") {
+   console.log("boolean");
+} else {
+   console.log("input word!");
+}
+//  Write a code to find the largest of two given integers
+let largest = (a, b) => {
+   num1 = a;
+   num2 = b;
+   if (num1 > num2) {
+      return `${num1} lebih besar`;
+   } else {
+      return `${num2} lebih besar`;
+   }
+   l;
+};
+console.log(largest(5, 10));
 
+// short number
 
+// let number = 20;
+
+// for (let i = 0; i <= number; i++) {
+//    let perkalian3 = "";
+//    let angka = "";
+//    if (i % 3 === 0) {
+//       perkalian3 += [i];
+//    } else {
+//       angka += [i];
+//    }
+//    console.log(angka);
+// }
+
+// let word = "purwadhika bandung";
+// let cap = word[0].toUpperCase();
+// let noCap = word.slice(1, 1000);
+// console.log(`${cap}` + `${noCap}`);
+
+// paliendrome code
+
+// let str = "dimas";
+// let l = len(str);
+// let p = l - 1;
+
+// index = 0;
+
+// while (index < p) {
+//    if (str[index] === str[p]) {
+//       index = index + 1;
+//       p = p - 1;
+//       console.log("String is a palindrome character");
+//       break;
+//    } else {
+//       console.log("String is not a palindrome character");
+//    }
+// }
+
+let palindrome = (str) => {
+   let len = Math.floor(str.length / 2);
+   for (let i = 0; i < len; i++)
+      if (str[i] !== str[str.length - i - 1]) return console.log("not palindrome");
+   return console.log("palindrome");
+};
+console.log(palindrome("popop"));
