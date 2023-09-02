@@ -1,5 +1,4 @@
 let arr = [20, 50, 60, 40, 70, 80, 100, 90];
-
 // mencari nilai terendah dan tertinggi array
 let low = Math.min(...arr);
 let high = Math.max(...arr);

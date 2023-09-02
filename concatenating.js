@@ -1,14 +1,7 @@
-// let arr = ["Purwadhika", "Jakarta", "Bandung"];
-// let strJoin = arr.join(",");
-// console.log(strJoin);
-
-let str = (a, b) => {
-   let arr = [];
-   let str = "";
-   let bJoin = b.join(" dan ");
-   arr.push(a, bJoin);
-   str += arr.join(",");
-   return str;
+let concat = (arr) => {
+   let comma = "";
+   comma += arr.slice(0, -1);
+   let result = `${comma}, and ${arr[arr.length - 1]}`;
+   return result;
 };
-
-console.log(str(["Purwadhika"], ["Bandung", "Jakarta", "Batam"]));
+console.log(concat(["Purwadhika", "Bandung", "Jakarta", "Batam"]));
