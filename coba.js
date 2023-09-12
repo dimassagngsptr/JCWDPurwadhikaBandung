@@ -1,10 +1,14 @@
-let convert = (str) => {
-   let result = 0;
-   for (let i = 1; i < str.length; i++) {
-       result += str[i];
-      // result += str.charCodeAt(i)
+let arr = (arr) => {
+   let arr3 = 0;
+   for (const num of arr) {
+      arr3 ^= num;
    }
-   return result
+   return arr3;
 };
+console.log(arr([4, 1, 2, 1, 2]));
 
-console.log(convert("A"))
+
+let myFunc = (arr) => {
+   return arr.filter(v => arr.filter(item => item == v).length == 1)
+}
+console.log(arr([4, 1, 2, 1, 2]));
